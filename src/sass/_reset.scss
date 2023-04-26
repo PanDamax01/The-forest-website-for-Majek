@@ -1,0 +1,45 @@
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+:focus {
+	outline: none;
+}
+
+iframe {
+	border: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
