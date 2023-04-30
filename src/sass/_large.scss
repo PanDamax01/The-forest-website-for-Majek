@@ -1,0 +1,14 @@
+@media (min-width: 1200px) {
+	.header {
+		&__content {
+			font-size: 2rem;
+		}
+	}
+
+	.hero {
+		&__title {
+			font-size: 4.4rem;
+			padding: 0.8em 4em;
+		}
+	}
+}

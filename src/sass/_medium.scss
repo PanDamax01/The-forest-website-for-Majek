@@ -1,0 +1,89 @@
+@media (min-width: 768px) {
+	//NAV
+	.nav {
+		&-navbar {
+			padding: 0 2em;
+		}
+
+		&__btn {
+			display: none;
+		}
+
+		&__list {
+			flex-direction: row;
+			justify-content: center;
+			position: static;
+			width: auto;
+			height: 86px;
+			transform: translateY(0);
+			animation: moveRight 1s forwards;
+			z-index: 100;
+		}
+
+		@keyframes moveRight {
+			from {
+				transform: translateX(100%);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		&__item {
+			margin: 0;
+			height: 86px;
+			line-height: 86px;
+			overflow: hidden;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&__link {
+			padding: 2em 2em;
+			font-size: 1.7rem;
+		}
+	}
+
+	//HEADER
+	.header {
+		background-image: url('../img/headerDesktop.jpg');
+		background-position-y: 66%;
+
+		&__content {
+			font-size: 1.6rem;
+		}
+		&__title {
+			font-weight: 300;
+			font-size: 2.5rem;
+		}
+	}
+
+	//ABOUT
+	.about {
+		&__box {
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			gap: 1em;
+		}
+
+		&__img {
+			max-width: 500px;
+			margin-bottom: 0;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	//HERO
+	.hero {
+		background-image: url('../img/heroDesktop.jpg');
+
+		&__title {
+			font-size: 2.8rem; 
+		}
+	}
+}

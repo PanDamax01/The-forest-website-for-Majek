@@ -1,0 +1,32 @@
+@use 'colors' as c;
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section-heading {
+	position: relative;
+	margin-bottom: 1em;
+	color: c.$dark;
+	font-size: 3rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.section-padding {
+	padding: 3em 2em;
+}
+
+@media (min-width: 768px) {
+	.section-heading {
+		margin-bottom: 1.2em;
+		font-size: 3.6rem;
+	}
+
+	.section-padding {
+		padding: 3.4em 2em;
+	}
+}
