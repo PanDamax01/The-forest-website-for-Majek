@@ -2,105 +2,123 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona dla klienta</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<title>Forest</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="dist/css/main.min.css">
-    <script src="https://kit.fontawesome.com/563d1b645f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="dist/css/main.min.css">
+<script src="https://kit.fontawesome.com/563d1b645f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- @include 'nav' -->
+<!-- @include 'nav' -->
 
-    <header class="header">
-        <div class="header__shadow"></div>
-        <div class="header__content wrapper">
-            <span class="header__title">Forest Group</span>
-            <h1>Najpiękniejszy park w Twojej okolicy!</h1>
+<header class="header">
+    <div class="header__shadow"></div>
+    <div class="header__content wrapper">
+        <span class="header__title">Forest Group</span>
+        <h1>Najpiękniejszy park w Twojej okolicy!</h1>
+    </div>
+</header>
+
+<main>
+    <section class="about section-padding">
+        <div class="wrapper">
+            <h2 class="section-heading">O nas</h2>
+
+            <div class="about__box">
+                <img src="src/img/about.jpg" alt="Jezioro" class="about__img" width="auto" height="auto">
+                <div class="about__box-text">
+                    <h3 class="about__header">Niezapomniane przygody</h3>
+                    <p class="about__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                        autem cum accusamus cumque aut dolore quia animi. Nulla rem
+                        tenetur necessitatibus eligendi repellat tempora nesciunt, ducimus
+                        explicabo enim porro facere nemo perferendis doloribus asperiores
+                        ipsa.Vero autem cum accusamus cumque aut dolore quia animi.
+                    </p>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
+    <section class="hero">
+        <h2 class="hero__title">Przygoda dla całej rodziny</h2>
+    </section>
+    <section class="offers section-padding">
+        <div class="wrapper">
+            <h2 class="section-heading">Oferta</h2>
+            <p class="offers__destription">Wybierz jedną z naszych wspaniałych ofert!</p>
 
-    <main>
-        <section class="about section-padding">
-            <div class="wrapper">
-                <h2 class="section-heading">O nas</h2>
-
-                <div class="about__box">
-                    <img src="../src/img/about.jpg" alt="Jezioro" class="about__img">
-                    <div class="about__box-text">
-                        <h3 class="about__title">Niezapomniane przygody</h3>
-                        <p class="about__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                            autem cum accusamus cumque aut dolore quia animi. Nulla rem
-                            tenetur necessitatibus eligendi repellat tempora nesciunt, ducimus
-                            explicabo enim porro facere nemo perferendis doloribus asperiores
-                            ipsa.Vero autem cum accusamus cumque aut dolore quia animi.
-                        </p>
-                    </div>
+            <div class="offers__box">
+                <div class="offers__card">
+                    <h3 class="offers__title">Demo</h3>
+                    <span class="offers__price">$0</span>
+                    <ul class="offers__list">
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item offers__item--nocheck">
+                            <div class="offers__line"></div> opcja poza pakietem
+                        </li>
+                        <li class="offers__item offers__item--nocheck">
+                            <div class="offers__line"></div>opcja poza pakietem
+                        </li>
+                        <li class="offers__item offers__item--nocheck">
+                            <div class="offers__line"></div>opcja poza pakietem
+                        </li>
+                    </ul>
+                    <button class="offers__btn btn-special-animation">Wybierz</button>
+                </div>
+                <div class="offers__card">
+                    <h3 class="offers__title">Standard</h3>
+                    <span class="offers__price">$0</span>
+                    <ul class="offers__list">
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item offers__item--nocheck">
+                            <div class="offers__line"></div>opcja poza pakietem
+                        </li>
+                        <li class="offers__item offers__item--nocheck">
+                            <div class="offers__line"></div>opcja poza pakietem
+                        </li>
+                    </ul>
+                    <button class="offers__btn offers__btn--special btn-special-animation">Wybierz</button>
+                </div>
+                <div class="offers__card">
+                    <h3 class="offers__title">Premium</h3>
+                    <span class="offers__price">$0</span>
+                    <ul class="offers__list">
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                        <li class="offers__item"><i class="fa-solid fa-check offers__icon"></i> opcja w pakiecie
+                        </li>
+                    </ul>
+                    <button class="offers__btn btn-special-animation">Wybierz</button>
                 </div>
             </div>
-        </section>
-        <section class="hero">
-            <h2 class="hero__title">Przygoda dla całej rodziny</h2>
-        </section>
-        <section class="offers section-padding">
-            <div class="wrapper">
-                <h2 class="section-heading">Oferta</h2>
-                <p class="offers__destription">Wybierz jedną z naszych wspaniałych ofert!</p>
+        </div>
+    </section>
+</main>
+<!-- @include 'footer' -->
 
-                <div class="offers__box">
-
-
-                    <div class="offers__card">
-                        <h3 class="offers__title">Demo</h3>
-                        <span class="offers__price">$0</span>
-
-                        <ul>
-                            <li>opcja ww</li>
-                            <li>opcja ww</li>
-                        </ul>
-                        <button class="offers__btn">Wybierz</button>
-                    </div>
-
-
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <section>sdasdasdasdasd</section>
-
-
-    <script src="../dist/js/main.min.js"></script>
+<script src="../dist/js/main.min.js"></script>
 </body>
 
 </html>
