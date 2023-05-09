@@ -505,10 +505,7 @@ body {
 		border-radius: 4px;
 		font-size: 1.5rem; 
 		transition: border-bottom 0.3s;
-
-		&:focus {
-			border-bottom: 2px solid c.$green-color;
-		}
+		outline: none;
 	}
 
 	&__label {
@@ -526,6 +523,10 @@ body {
 		resize: vertical;
 		height: 100px;
 		min-height: 100px;
+	}
+
+	&__honey{
+		display: none;
 	}
 
 	&__btn {
@@ -550,6 +551,11 @@ body {
 	&__iframe{
 		width: 100%;
 	}
+}
+
+.field-error {
+    border-color: tomato;
+    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3);
 }
 
 @import 'small';

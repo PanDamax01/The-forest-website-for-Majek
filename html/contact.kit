@@ -22,26 +22,30 @@
         <div class="wrapper">
             <h2 class="section-heading">Kontakt</h2>
             <div class="contact__container">
+                <form class="contact__form" method="post" action="#">
 
 
-                <form action="#" class="contact__form">
                     <div class="contact__box">
-                        <label for="contact-name" class="contact__label">Imię:</label>
-                        <input type="text" class="contact__input" name="contact-name" id="contact-name" required>
+                        <label for="contact-name" class="contact__label">Imię: (min. 3 znaki)*</label>
+                        <input type="text" class="contact__input" name="contact-name" required pattern=.{3,} required>
                         <i class="fa-solid fa-address-card  contact__icon"></i>
                     </div>
                     <div class="contact__box">
                         <label for="contact-mail" class="contact__label">Adres mailowy:</label>
-                        <input type="email" class="contact__input" name="contact-mail" id="contact-mail" required>
+                        <input type="email" class="contact__input" name="contact-mail" required>
                         <i class="fa-solid fa-envelope contact__icon"></i>
                     </div>
                     <div class="contact__box">
                         <label for="contact-textarea" class="contact__label">Wiadomość:</label>
-                        <textarea type="email" class="contact__textarea" name="contact-textarea" id="contact-textarea" autocomplete="off" required></textarea>
+                        <textarea type="email" class="contact__textarea" name="contact-textarea" autocomplete="off" required></textarea>
                         <i class="fa-solid fa-square-pen contact__icon"></i>
                     </div>
+                    <span class="contact__honey">
+                        <label for="honey">Jeżeli jesteś człowiekiem, nie wypełniaj tego pola</label>
+                        <input type="text" name="honey">
+                    </span>
 
-                    <button class="contact__btn btn-special-animation">Wyślij <i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" class="contact__btn btn-special-animation">Wyślij <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
                 <div class="contact__map">
                     <h2 class="section-heading">Mapa</h2>

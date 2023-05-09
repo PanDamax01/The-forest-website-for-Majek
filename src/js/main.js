@@ -1,4 +1,4 @@
-let btnNavPlate, nav, btnNav, linksNav, footerYear ,sections
+let btnNavPlate, nav, btnNav, linksNav, footerYear, sections, form, inputs
 
 const main = () => {
 	prepareDOMElements()
@@ -11,7 +11,9 @@ const prepareDOMElements = () => {
 	btnNav = document.querySelector('.nav__btn')
 	linksNav = document.querySelectorAll('.nav__link')
 	footerYear = document.querySelector('.footer__year')
-    sections = document.querySelectorAll('.section')     
+	sections = document.querySelectorAll('.section')
+	form = document.querySelector('form')
+	inputs = form.querySelectorAll('[required]')
 }
 
 const prepareDOMEvents = () => {
@@ -19,10 +21,15 @@ const prepareDOMEvents = () => {
 	linksNav.forEach((el) => {
 		el.addEventListener('click', hiddenNav)
 	})
-    sections.forEach(section => {
-        observer.observe(section)
-    })  
-    handleCurrentYear()
+	sections.forEach((section) => {
+		observer.observe(section)
+	})
+	handleCurrentYear()
+	inputs.forEach((el) =>
+	el.addEventListener('input', (e) =>
+		markFieldAsError(e.target, !e.target.checkValidity())
+	)
+)
 }
 
 const showNav = () => {
@@ -46,27 +53,27 @@ const hiddenNav = () => {
 }
 
 const options = {
-    root: null,
-    threshold: 0.9
-};
-
-const activateNavLink = (entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            const id = entry.target.getAttribute('id');
-            addActiveClass(id);
-        }
-    })
+	root: null,
+	threshold: 0.9,
 }
 
-const addActiveClass = (id)=> {
-    linksNav.forEach(link => {
-      if (link.getAttribute('href') === `index.html#${id}`) {
-        link.classList.add('nav__link--active');
-      } else {
-        link.classList.remove('nav__link--active');
-      }
-    });
+const activateNavLink = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			const id = entry.target.getAttribute('id')
+			addActiveClass(id)
+		}
+	})
+}
+
+const addActiveClass = (id) => {
+	linksNav.forEach((link) => {
+		if (link.getAttribute('href') === `index.html#${id}`) {
+			link.classList.add('nav__link--active')
+		} else {
+			link.classList.remove('nav__link--active')
+		}
+	})
 }
 
 const observer = new IntersectionObserver(activateNavLink, options)
@@ -76,38 +83,12 @@ const handleCurrentYear = () => {
 	footerYear.textContent = year
 }
 
+const markFieldAsError = (field, show) => {
+	if (show) {
+		field.classList.add('field-error')
+	} else {
+		field.classList.remove('field-error')
+	}
+}
+
 document.addEventListener('DOMContentLoaded', main)
-
-
-////////////////////////////////////////////////to delete
-// const sections = document.querySelectorAll('.section')
-
-// const options = {
-//     root: null,
-//     threshold: 0.9
-// };
-
-// const addActiveClass = (entries)=>{
-//     entries.forEach(entry=>{
-//         if(entry.isIntersecting){
-//             const id = entry.target.getAttribute('id');
-//             activateNavLink(id);
-//         }
-//     })
-// }
-
-// const activateNavLink = (id)=> {
-//     linksNav.forEach(link => {
-//       if (link.getAttribute('href') === `index.html#${id}`) {
-//         link.classList.add('nav__link--active');
-//       } else {
-//         link.classList.remove('nav__link--active');
-//       }
-//     });
-// }
-
-// const observer = new IntersectionObserver(addActiveClass, options)
-
-// sections.forEach(section => {
-//     observer.observe(section)
-// })

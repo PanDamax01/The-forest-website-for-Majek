@@ -46,7 +46,7 @@
 
 			&--active {
 				color: c.$main-color;
-				background-color: c.$dark; //to delete here
+				background-color: c.$dark;
 			}
 		}
 	}
@@ -127,7 +127,7 @@
 		}
 		.nav__item:last-child .nav__link {
 			color: c.$main-color;
-			background-color: c.$dark; ////////////reset
+			background-color: c.$dark; 
 		}
 	}
 
