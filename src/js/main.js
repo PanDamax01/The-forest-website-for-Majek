@@ -13,7 +13,9 @@ const prepareDOMElements = () => {
 	footerYear = document.querySelector('.footer__year')
 	sections = document.querySelectorAll('.section')
 	form = document.querySelector('form')
-	inputs = form.querySelectorAll('[required]')
+	if (document.body.classList.contains('contact-page')) {
+		inputs = form.querySelectorAll('[required]')
+	}
 }
 
 const prepareDOMEvents = () => {
@@ -26,10 +28,10 @@ const prepareDOMEvents = () => {
 	})
 	handleCurrentYear()
 	inputs.forEach((el) =>
-	el.addEventListener('input', (e) =>
-		markFieldAsError(e.target, !e.target.checkValidity())
+		el.addEventListener('input', (e) =>
+			markFieldAsError(e.target, !e.target.checkValidity())
+		)
 	)
-)
 }
 
 const showNav = () => {
